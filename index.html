@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistan Bot - Gelişmiş Discord Bot</title>
+    <meta name="description" content="Asistan Bot, sunucunuz için gelişmiş moderasyon, eğlence ve yapay zeka özellikleri sunan çok yönlü bir Discord botudur.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Asistan Bot Logo">
+                    <span>Asistan Bot</span>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Ana Sayfa</a></li>
+                    <li><a href="#features">Özellikler</a></li>
+                    <li><a href="#commands">Komutlar</a></li>
+                    <li><a href="#stats">İstatistikler</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                    <li><a href="https://discord.com/oauth2/authorize?client_id=1234567890&scope=bot&permissions=8" class="btn-primary" target="_blank">Botu Ekle</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sunucunuz İçin Gelişmiş Discord Botu</h1>
+                <p>Moderasyon, eğlence, yapay zeka ve daha fazlası. Güçlü özelliklerle donatılmış Asistan Bot ile sunucunuzu bir üst seviyeye taşıyın.</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1234567890&scope=bot&permissions=8" class="btn-primary" target="_blank">
+                        <i class="fas fa-plus"></i> Botu Ekle
+                    </a>
+                    <a href="https://discord.gg/asistanbot" class="btn-secondary" target="_blank">
+                        <i class="fab fa-discord"></i> Destek Sunucusu
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="bot-image-container">
+                    <img src="https://cdn.discordapp.com/avatars/1234567890/abcdef1234567890.png" alt="Asistan Bot" class="bot-image" onerror="this.src='images/logo.svg'">
+                    <div class="status-indicator online"></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat">
+                        <span class="stat-value" id="server-count">900+</span>
+                        <span class="stat-label">Sunucu</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="user-count">115k+</span>
+                        <span class="stat-label">Kullanıcı</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,181.3C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Özellikler</h2>
+            <p class="section-description">Asistan Bot'un sunduğu özelliklerle sunucunuzu geliştirin</p>
+            
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Gelişmiş Moderasyon</h3>
+                    <p>Sunucunuzu korumak için otomod, susturma, yasaklama ve davetiye takibi gibi kapsamlı moderasyon araçları.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Eğlence Komutları</h3>
+                    <p>Adam asmaca, taş-kağıt-makas ve zar atma gibi eğlenceli oyunlarla sunucunuzu canlandırın.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Yapay Zeka</h3>
+                    <p>Gelişmiş AI ile sorulara cevaplar, kod dönüştürme ve yaratıcı içerik oluşturma imkanı.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Özelleştirme</h3>
+                    <p>Hoşgeldin mesajları, özel komutlar ve otomatik roller ile botunuzu tam istediğiniz gibi ayarlayın.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>İstatistikler</h3>
+                    <p>Sunucu etkinliği, kullanıcı katılımı ve komut kullanımı hakkında detaylı analizler.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>7/24 Destek</h3>
+                    <p>Aktif destek ekibi ve yardım komutları ile her sorununuza hızlı çözümler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands" class="commands">
+        <div class="container">
+            <h2 class="section-title">Komutlar</h2>
+            <p class="section-description">En popüler ve kullanışlı komutları keşfedin</p>
+            
+            <div class="command-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="moderasyon">Moderasyon</button>
+                    <button class="tab-button" data-tab="eglence">Eğlence</button>
+                    <button class="tab-button" data-tab="yapay_zeka">Yapay Zeka</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="moderasyon">
+                        <div class="commands-list">
+                            <!-- Moderasyon komutları buraya dinamik olarak eklenecek -->
+                            <div class="command-loading">
+                                <div class="spinner"></div>
+                                <p>Komutlar yükleniyor...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="eglence">
+                        <div class="commands-list">
+                            <!-- Eğlence komutları buraya dinamik olarak eklenecek -->
+                            <div class="command-loading">
+                                <div class="spinner"></div>
+                                <p>Komutlar yükleniyor...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="yapay_zeka">
+                        <div class="commands-list">
+                            <!-- Yapay zeka komutları buraya dinamik olarak eklenecek -->
+                            <div class="command-loading">
+                                <div class="spinner"></div>
+                                <p>Komutlar yükleniyor...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="command-note">
+                <p><i class="fas fa-info-circle"></i> Daha fazla komut için <code>.yardım</code> komutunu kullanabilir veya <a href="https://discord.gg/asistanbot" target="_blank">destek sunucumuza</a> katılabilirsiniz.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2 class="section-title">İstatistikler</h2>
+            <p class="section-description">Asistan Bot'un güncel verileri</p>
+            
+            <div class="stats-cards">
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="stats-info">
+                        <span class="stats-value" id="stats-servers">943</span>
+                        <span class="stats-label">Sunucu</span>
+                    </div>
+                </div>
+                
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stats-info">
+                        <span class="stats-value" id="stats-users">115,937</span>
+                        <span class="stats-label">Kullanıcı</span>
+                    </div>
+                </div>
+                
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="stats-info">
+                        <span class="stats-value" id="stats-shards">212</span>
+                        <span class="stats-label">Shard</span>
+                    </div>
+                </div>
+                
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="stats-info">
+                        <span class="stats-value" id="stats-commands">128</span>
+                        <span class="stats-label">Komut</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <p class="section-description">Sorularınız veya önerileriniz mi var? Bize ulaşın!</p>
+            
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ad Soyad</label>
+                            <input type="text" id="name" name="name" placeholder="Adınız ve soyadınız" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-posta</label>
+                            <input type="email" id="email" name="email" placeholder="E-posta adresiniz" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Konu</label>
+                            <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusu" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesaj</label>
+                            <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Gönder
+                        </button>
+                    </form>
+                    
+                    <div id="form-success" class="form-notification success" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.</p>
+                    </div>
+                    
+                    <div id="form-error" class="form-notification error" style="display: none;">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Mesajınız gönderilirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3>Discord</h3>
+                        <p>Destek sunucumuza katılın ve canlı yardım alın.</p>
+                        <a href="https://discord.gg/asistanbot" class="contact-link" target="_blank">discord.gg/asistanbot</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>E-posta</h3>
+                        <p>Sorularınız için e-posta gönderebilirsiniz.</p>
+                        <a href="mailto:iletisim@asistanbot.com" class="contact-link">iletisim@asistanbot.com</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <h3>Twitter</h3>
+                        <p>Güncellemeler ve duyurular için takip edin.</p>
+                        <a href="https://twitter.com/asistanbot" class="contact-link" target="_blank">@asistanbot</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="Asistan Bot Logo">
+                    <h3>Asistan Bot</h3>
+                    <p>Türkiye'nin en gelişmiş Discord botu.</p>
+                    <div class="social-links">
+                        <a href="https://discord.gg/asistanbot" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/asistanbot" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/asistanbot" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/asistanbot" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4>Bot</h4>
+                        <ul>
+                            <li><a href="#features">Özellikler</a></li>
+                            <li><a href="#commands">Komutlar</a></li>
+                            <li><a href="#stats">İstatistikler</a></li>
+                            <li><a href="https://discord.com/oauth2/authorize?client_id=1234567890&scope=bot&permissions=8" target="_blank">Botu Ekle</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-link-group">
+                        <h4>Destek</h4>
+                        <ul>
+                            <li><a href="#contact">İletişim</a></li>
+                            <li><a href="https://discord.gg/asistanbot" target="_blank">Destek Sunucusu</a></li>
+                            <li><a href="/docs/faq">SSS</a></li>
+                            <li><a href="/docs/tutorials">Rehberler</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-link-group">
+                        <h4>Yasal</h4>
+                        <ul>
+                            <li><a href="/legal/terms">Kullanım Şartları</a></li>
+                            <li><a href="/legal/privacy">Gizlilik Politikası</a></li>
+                            <li><a href="/legal/cookies">Çerez Politikası</a></li>
+                            <li><a href="/legal/dmca">DMCA</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Asistan Bot. Tüm hakları saklıdır.</p>
+                <p>Discord, Discord Inc.'in tescilli markasıdır.</p>
+                <p>Çalışma Süresi: <span id="uptime">Loading...</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" title="Başa Dön">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+  </html>
