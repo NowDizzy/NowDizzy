@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Sayfa Bulunamadı | Asistan Bot</title>
+    <meta name="description" content="Aradığınız sayfa bulunamadı. Asistan Discord botu ana sayfasına dönün.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    <!-- Ana CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #7289da 100%);
+            color: white;
+            position: relative;
+        }
+        
+        .error-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./images/pattern.svg');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .error-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 8rem;
+            color: rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .error-bot {
+            font-size: 8rem;
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .error-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-code::after {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-bot {
+                font-size: 6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 4rem;
+            }
+            
+            .error-code::after {
+                font-size: 4rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-description {
+                font-size: 1rem;
+            }
+            
+            .error-bot {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-bot">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="error-code">404</div>
+            <h1 class="error-title">Sayfa Bulunamadı</h1>
+            <p class="error-description">
+                Aradığınız sayfa mevcut değil veya başka bir adrese taşınmış olabilir.
+                Belki de bot bu sayfayı bir Discord sunucusuna transfer etti? 🤖
+            </p>
+            <div class="error-buttons">
+                <a href="/" class="btn btn-secondary">Ana Sayfaya Dön</a>
+                <a href="https://discord.gg/JaAEpHXDQS" class="btn btn-outline">Destek Sunucusuna Katıl</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Sayfa animasyonu
+        document.addEventListener('DOMContentLoaded', function() {
+            const errorBot = document.querySelector('.error-bot');
+            const errorCode = document.querySelector('.error-code');
+            
+            // Rastgele emoji seçimi
+            const robotEmojis = ['🤖', '👾', '🎮', '⚡️', '💾', '🔌', '🖥️'];
+            let currentEmoji = 0;
+            
+            // Emoji değiştirme animasyonu
+            setInterval(() => {
+                errorBot.style.opacity = 0;
+                
+                setTimeout(() => {
+                    currentEmoji = (currentEmoji + 1) % robotEmojis.length;
+                    errorBot.innerHTML = robotEmojis[currentEmoji];
+                    errorBot.style.opacity = 1;
+                }, 500);
+            }, 3000);
+            
+            // Glitch efekti
+            setInterval(() => {
+                errorCode.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px)`;
+                
+                setTimeout(() => {
+                    errorCode.style.transform = 'translate(0, 0)';
+                }, 100);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
